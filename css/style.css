@@ -22,7 +22,6 @@ html {
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
     padding: 3rem;
@@ -35,26 +34,25 @@ body {
     background-size: cover;
     background-position: top;
 
-    position: relative; /* bo względem headera pozycjonujemy tekst */
+    position: relative;
     
-    /* (left top, right top, left bottom, right bottom) */
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
 }
 
 /* Logo */
-.logo-box {
+.header__logo-box {
     position: absolute;
     left: 4rem;
     top: 4rem;
 }
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
 
 /* Header text */
-.text-box {
-    position: absolute; /* absolute względem headera (ma relative) */
+.header__text-box {
+    position: absolute; 
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);    
@@ -64,11 +62,11 @@ body {
     color: #fff;
     text-transform: uppercase;
 
-    backface-visibility: hidden; /* naprawa trząsącej się końcówki animacji */
+    backface-visibility: hidden;
 
     margin-bottom: 6rem;
 }
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -76,12 +74,10 @@ body {
  
     animation-name: moveInLeft;
     animation-duration: 1s;
-    /* animation-delay: 1s;             opóźnienie animacji */
-    /* animation-iteration-count: 3;    ilość powtórzeń animacji */
-    animation-timing-function: ease-out; /*zaczyna szybciej i zwalnia itp */
+    animation-timing-function: ease-out; 
 
 }
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -151,7 +147,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
-    display: inline-block; /* zawsze jeśli chcemy nadać padding itp */
+    display: inline-block;
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
@@ -161,7 +157,7 @@ body {
 /* po najechaniu */
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2)  /* x, y, blur, color */
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 
 /* po kliknięciu */
@@ -170,7 +166,7 @@ body {
     box-shadow: 0 .5rem 1rem;
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;   
 }
@@ -190,7 +186,7 @@ body {
     transition: all .4s ease-in-out;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -200,9 +196,9 @@ body {
    
 }
 
-.btn-animated {
-    animation: moveInBottom .5s ease-out .75s; /* name, duration, ... , delay */
-    animation-fill-mode: backwards; /* naprawa lag animacji, nakłada style zanim animacja się zacznie */
+.btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
     
 }
 
